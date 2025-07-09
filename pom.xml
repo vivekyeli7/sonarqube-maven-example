@@ -18,6 +18,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+         
+<server>
+  <id>nexus</id>
+  <username>admin</username>
+  <password>admin123</password>
+</server>
 
     <build>
         <pluginManagement>

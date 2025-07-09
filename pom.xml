@@ -2,7 +2,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
@@ -24,16 +24,16 @@
     </dependency>
   </dependencies>
 
-         <distributionManagement>
-  <repository>
-    <id>nexus</id>
-    <url>http://<nexus-host>:8081/repository/maven-releases/</url>
-  </repository>
-  <snapshotRepository>
-    <id>nexus</id>
-    <url>http://<nexus-host>:8081/repository/maven-snapshots/</url>
-  </snapshotRepository>
-</distributionManagement>
+  <distributionManagement>
+    <repository>
+      <id>nexus</id>
+      <url>http://<nexus-host>:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus</id>
+      <url>http://<nexus-host>:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -50,7 +50,13 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
       </plugin>
+
+      <!-- SonarQube Scanner plugin -->
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.9.1.2184</version>
+      </plugin>
     </plugins>
   </build>
-
 </project>

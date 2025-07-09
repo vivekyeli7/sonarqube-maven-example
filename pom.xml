@@ -18,12 +18,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-         
-<server>
-  <id>nexus</id>
-  <username>admin</username>
-  <password>March@#54321</password>
-</server>
 
     <build>
         <pluginManagement>
@@ -46,6 +40,17 @@
             </plugins>
         </pluginManagement>
     </build>
+
+<settings>
+  ...
+  <servers>
+    <server>
+      <id>nexus</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+  </servers>
+</settings>
 
     <profiles>
         <profile>
